@@ -14,7 +14,7 @@ class Student {
                 System.out.println("Имя не должно быть пустым.");
             }
         } while (name.isEmpty());
-        age = Tester.readInt(scanner, "Возраст: ", 1, 150);
+        age = Practice17Task1.readInt(scanner, "Возраст: ", 1, 150);
     }
 
     public void print() {
@@ -106,7 +106,7 @@ class StudentList {
     }
 }
 
-public class Tester {
+public class Practice17Task1 {
     static int readInt(Scanner scanner, String prompt, int min, int max) {
         while (true) {
             System.out.print(prompt);
