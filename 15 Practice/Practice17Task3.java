@@ -1,4 +1,3 @@
-// В PDF два пункта названы «Задание 2». Здесь кольцевой список — третья программа.
 import java.util.Scanner;
 
 // Узел кольцевого односвязного списка.
@@ -23,7 +22,6 @@ class StudentTask3 {
     }
 }
 
-// Кольцевой односвязный список: последний узел ссылается на первый.
 class StudentListTask3 {
     private StudentTask3 tail;
     private int size;
@@ -47,7 +45,6 @@ class StudentListTask3 {
         size++;
     }
 
-    // Первый узел — tail.next. Нумерация начинается с 1.
     public boolean remove(int position) {
         if (position < 1 || position > size) {
             return false;
@@ -88,7 +85,6 @@ class StudentListTask3 {
             return;
         }
         StudentTask3 current = tail.next;
-        // Ограничиваем обход числом узлов, чтобы не ходить по кольцу бесконечно.
         for (int position = 1; position <= size; position++) {
             System.out.print(position + ". ");
             current.print();
@@ -98,7 +94,7 @@ class StudentListTask3 {
 
     public void clear() {
         if (tail != null) {
-            tail.next = null; // Разрываем кольцо.
+            tail.next = null; 
         }
         tail = null;
         size = 0;
@@ -115,7 +111,6 @@ public class Practice17Task3 {
                     return value;
                 }
             } catch (NumberFormatException e) {
-                // Повторяем ввод, если введено не целое число.
             }
             System.out.println("Введите целое число от " + min + " до " + max + ".");
         }
